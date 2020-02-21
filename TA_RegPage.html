@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TA Tracking System</title>
+    <link rel="stylesheet" href="TAHome.css">
+  </head>
+  <body>
+
+    <div class="TAHome_div">
+      <div class="TAHome_header">
+        <img src="./images/UHCL_Logo_1.png" alt="www.uhcl.edu" style="width:100px;height:100px;border:0;" align="right">
+      </div>
+      <div>
+        <h2 align="center">TA Regisration </h2>
+      </div>
+      <div class="TAHome_Reg_div">
+        <form action="TA_Time.html" method="post">
+          <table style="width:100%">
+            <tr>
+              <td>
+                <label for="TA_FirstName">Student First Name</label>
+              </td>
+              <td>
+                <input type="text" id="TA_FirstName" name="" placeholder="Enter First Name" required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="TA_LastName">Student Last Name</label>
+              </td>
+              <td>
+                <input type="text" id="TA_LastName" name="" placeholder="Enter Last Name" required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="TA_ContactNo">Contact Number</label>
+              </td>
+              <td>
+                <input type="text" id="TA_ContactNo" name="" placeholder="Enter Contact number" required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="TA_Dept">Choose the Department</label>
+              </td>
+              <td>
+                  <select id="TA_Dept">
+                  <option value="csc">Computer Science</option>
+                  <option value="cis">Computer Information Systems</option>
+                  <option value="swen">Software Engineering</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="TA_Course">Choose the Courset</label>
+              </td>
+              <td>
+                  <select id="TA_Course">
+                  <option value="sdlc">Software Development Life Cycle </option>
+                  <option value="sa">Software Architecture</option>
+                  <option value="es1">Engineering Software -1</option>
+                  <option value="es2">Engineering Software -2</option>
+                  <option value="sc">Software Construction </option>
+                  <option value="tvv">Testing Verification and Validation</option>
+                  <option value="asd">Agile Software Development </option>
+                  <option value="re">Requirements Engineering</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" name="" value="Submit"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+
+      <div class="TAHome_footer">
+        <footer align="right"> &copy Copyrights 2020, Univerysity of Houston-ClearLake </footer>
+      </div>
+
+  </body>
+
+  <script>
+  function myFunction() {
+    var dept = document.getElementById("TA_Dept").value;
+    document.getElementById("demo").innerHTML = dept;
+  }
+</script>
+</html>
