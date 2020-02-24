@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="utf-8">
+ <title>TA Appointment Scheduler</title>
+ <link rel="stylesheet" href="../css/TAHome.css">
+</head>
+<body>
+
+<div class="TAHome_header">
+     <img src="../images/UHCL_Logo_1.png" alt="www.uhcl.edu" style="width:100px;height:100px;border:0;" align="right">
+   </div>
+<div class="TASched_div">
+   <form action="./TA_Time.html" method="post">
+     <h2 align=center> TA  Availability and Appointment Scheduling </h2>
+     <label for="firstname"><b>Please Enter Your Name Before Meeting Your TA</b></label>
+     <input type="text" name="fname" value="">
+
+     <p><b> Choose the day you want to meet TA</b></p>
+
+     <select name="days">
+       <option value="1"> Monday</option>
+        <option value="2">Tuesday </option>
+        <option value="3">Wednesday </option>
+        <option value="4">Thursday </option>
+        <option value="5">Friday </option>
+      </select>
+   <p><b>Choose Your TA Department Wise <b></p>
+     <select name="TA Name">
+        <optgroup label="SWEN TA'S">
+         <option> Sudarshan </option>
+         <option> Mark Halle </option>
+         <option> Achyutha</option>
+        <optgroup label ="Computer TA's">
+           <option> Arpit Jain </option>
+           <option> Gunjan </option>
+           <option> Tarun</option>
+           <option> Shravya Chava </option>
+           <option> Darshitha </option>
+        <optgroup label ="Computer Infomation System TA's">
+          <option> Ronak</option>
+          <option> Sahar Mardani</option>
+        </optgroup>
+      </select>
+<p><b> Choose The Timing you want to book appointment with TA </b></p>
+  <select name ="Timings">
+    <optgroup label = "TA Timings">
+      <option>8AM TO 1PM</option>
+      <option>10AM TO 1PM </option>
+      <option>1PM TO 4PM</option>
+      <option>4PM TO 7PM</option>
+      <option>7PM TO 10PM</option>
+    </optgroup>
+  </select>
+<p><b>Choose the place where you want to meet your TA</b></p>
+  <select name = "place">
+    <optgroup label ="TA Meeting Point">
+      <optgroup label ="TA ROOM">
+        <option>D238 ROOM</option>
+      </optgroup>
+      <optgroup label = "Delta Lab">
+        <option>DELTA LAB - ROW 1</option>
+        <option>DELTA LAB - ROW 2 </option>
+        <option>DELTA LAB - ROW 3</option>
+        <option>DELTA LAB - ROW 4</option>
+        <option>DELTA LAB - ROW 5</option>
+      </optgroup>
+  <optgroup label="MAC Lab">
+    <option>MAC LAB - ROW 1</option>
+    <option>MAC LAB - ROW 2</option>
+    <option>MAC LAB - ROW 3</option>
+    <option>MAC LAB - ROW 4</option>
+    <option>MAC LAB - ROW 5</option>
+  </optgroup>
+    <optgroup label="UNIX Lab">
+      <option>UNIX LAB - ROW 1</option>
+      <option>UNIX LAB - ROW 2</option>
+      <option>UNIX LAB - ROW 3</option>
+      <option>UNIX LAB - ROW 4</option>
+      <option>UNIX LAB - ROW 5</option>
+    </optgroup>
+  </select>
+  <input align=center type="submit" name="meetup" value="Meet Up">
+</form>
+</div>
+
+<div class="TAHome_footer">
+     <footer align="right"> &copy Copyrights 2020, University of Houston-ClearLake </footer>
+</div>
+</body>
+</html>

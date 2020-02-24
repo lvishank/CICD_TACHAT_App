@@ -1,0 +1,54 @@
+
+body{
+  background-color: whitesmoke;
+}
+div.TAHome_header {
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  image-orientation: right;
+  color: #2e4975;
+}
+div.TAHome_Login,div.TAHome_Reg_div {
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #dae2f2;
+  padding: 20px;
+}
+div.TAHome_footer {
+  padding: 20px;
+  margin: auto;
+  text-align: right;
+  font-size: small;
+  image-orientation: right;
+  color: #2e4975;
+}
+label{
+  color: #2e4975;
+}
+input[type=text],[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 50%;
+  background-color: #87accc;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+
+}
+
+input[type=submit]:hover {
+  background-color: #adcddb;
+}
