@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script src="http://localhost:9001/socket.io/socket.io.js"></script>
+        <script>
+            const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJfZDUzMHN1NjB0IiwiaWF0IjoxNTgzMzMyMDgxfQ.GcKInotbZjV79iYwKrnH_iwrljV2eWtA5dWTCUqaPjM';
+            const room = 'course:course1:_jdpmova7h';
+            const socket = io();
+            socket.on('disconnect', () => {
+                console.log('socket disconnected');
+            });
+            socket.on('reconnect', function() {
+                console.log('reconnected');
+                socket.emit('initialize', {
+                    token,
+                    rooms: [room]
+                });
+            });
+            socket.emit('initialize', {
+                token,
+                rooms: [room],
+                broadcaseMyPresenceToRooms: ['course:course1']
+            });
+            socket.on('newUserJoined', details => {
+                console.log(details);
+            });
+            socket.on('message', details => {
+                console.log(details);
+            });
+            socket.on('roomParticipants', details => {
+                console.log('participants', details);
+            });
+            socket.on('userOffline', details => {
+                console.log('user offline details', details);
+            });
+            socket.emit('getUserChatRoomHistory', {
+                token,
+                room
+            });
+            socket.on('userChatHistory', details => {
+                console.log('chatHistory', details);
+            });
+            // setTimeout(() => {
+            //     socket.emit('message', {
+            //         token,
+            //         room,
+            //         message: 'Hi'
+            //     });
+            // }, 1000);
+        </script>
+    </head>
+</html>
